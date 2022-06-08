@@ -44,10 +44,6 @@ add_filter('nav_menu_css_class', 'ClassToLI', 10, 4);
 function ClassToLI($classes, $item, $args, $depth){
       if ($args->theme_location == 'primary') {
          $classes [] = 'main__menu--item';
-         //if($item->current) {
-            //$class = 'active';
-            //$classes['class'] = isset( $classes['class'] ) ? "{$classes['class']} $class" : $class;
-         //}
       }
    return $classes;
 }
@@ -56,9 +52,10 @@ function ClassToLInks( $atts, $item, $args, $depth ) {
 	if($args->theme_location == 'primary') {
       $class = 'main__menu--link';
       if($item->current) {
-         $class = 'active';
+         $class = 'main__menu--link active';
          $classes['class'] = isset( $classes['class'] ) ? "{$classes['class']} $class" : $class;
       }
+      $atts['aria-current'] = '';
 		$atts['class'] = isset( $atts['class'] ) ? "{$atts['class']} $class" : $class;
 	}
 	return $atts;
