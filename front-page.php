@@ -72,29 +72,21 @@
   <section class="gallery mt-6" id="gallery">
     <div class="container">
       <div class="gallery__row text__center">
-        <h2>Приклади наших робіт</h2>
+        <h2><?php the_field('zagolovok_slajdera_robit_galereyi'); ?></h2>
         <div class="gallery__slider" id="gallerySlider">
-          <a href="img/work__slider/1.JPG"  data-lightbox="roadtrip">
-            <img src="img/work__slider/1.JPG" alt="wedding" class="img"> 
-          </a>
-          <a href="img/work__slider/2.jpg"  data-lightbox="roadtrip">
-            <img src="img/work__slider/2.jpg" alt="wedding" class="img"> 
-          </a>
-          <a href="img/work__slider/3.JPG"  data-lightbox="roadtrip">
-            <img src="img/work__slider/3.JPG" alt="wedding" class="img"> 
-          </a>
-          <a href="img/work__slider/4.jpg"  data-lightbox="roadtrip">
-            <img src="img/work__slider/4.jpg" alt="wedding" class="img"> 
-          </a>
-          <a href="img/work__slider/5.JPG"  data-lightbox="roadtrip">
-            <img src="img/work__slider/5.JPG" alt="wedding" class="img"> 
-          </a>
-          <a href="img/work__slider/6.JPG"  data-lightbox="roadtrip">
-            <img src="img/work__slider/6.JPG" alt="wedding" class="img"> 
-          </a>
+          <?php if( have_rows('zobrazhennya_slajdera_robit') ): ?>
+            <?php while( have_rows('zobrazhennya_slajdera_robit') ): the_row(); ?>
+              <?php if( have_rows('grupa_zobrazhen_slajdera') ): ?>
+                <?php while( have_rows('grupa_zobrazhen_slajdera') ): the_row(); ?>
+                  <a href="<?php the_sub_field('velyke_zobrazhennya_slajdera'); ?>"  data-lightbox="roadtrip">
+                    <img src="<?php the_sub_field('minyatyura_slajdera_robit'); ?>" alt="wedding" class="img"> 
+                  </a>
+                <?php endwhile; ?>
+              <?php endif; ?>
+            <?php endwhile; ?>
+          <?php endif; ?>
         </div><!--/.gallery__slider-->
       </div><!--/.gallery__row-->
     </div><!--/.container-->
   </section><!--/.gallery-->
-
 <?php get_footer(); ?>
