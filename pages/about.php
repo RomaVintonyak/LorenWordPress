@@ -53,64 +53,21 @@
                <?php endif; ?>
             </div>
             <div class="stage__check">
-               <h4>Чому саме Ми?...</h4>
+               <h4><?php the_field('zagolovok_bloku_chomu_my'); ?></h4>
                <ul class="stage__check--list">
-                  <li class="wow bounceInRight" data-wow-duration="2s" data-wow-offset="100">
-                     <p>
-                        Ми працюємо в сфері декору вже 6 років, 
-                        а отже маємо найважливіше &ndash; досвід.
-                     </p>
-                  </li>
-                  <li class="wow bounceInRight" data-wow-duration="2s" data-wow-offset="80" data-wow-delay="1s">
-                     <p>
-                        Ми ростемо, розвиваємось, вчимось новому, щоб  йти в ногу з трендами.
-                     </p>
-                  </li>
-                  <li class="wow bounceInRight" data-wow-duration="2s" data-wow-offset="60" data-wow-delay="2s">
-                     <p>
-                        Ми в силі зробити для Вас весілля мрії, 
-                        враховуємо всі побажання і втілюємо їх в життя.
-                     </p>
-                  </li>
-                  <li class="wow bounceInRight" data-wow-duration="2s" data-wow-offset="40" data-wow-delay="3s">
-                     <p>
-                        Ми самостійні, тому тобі не потрібно хвилюватись ні про що. 
-                        В наші обов’язки входить спілкування з адміністрацією ресторану, 
-                        замовлення всіх необхідних матеріалів, втілення в життя всіх ідей, 
-                        транспорт, монтаж та демонтаж. Все що потрібно від Вас &ndash; це вибір 
-                        декору мрії, далі робота за нами.
-                     </p>
-                  </li>
-                  <li class="wow bounceInRight" data-wow-duration="2s" data-wow-offset="20" data-wow-delay="4s">
-                     <p>
-                        Про нашу роботу говорять багато хорошого, 
-                        основна наша мета це задоволений клієнт, без жодних непорозумінь.
-                     </p>
-                  </li>
-                  <li class="wow bounceInRight" data-wow-duration="2s" data-wow-offset="10" data-wow-delay="5s">
-                     <p>
-                        В нас немає мінімального бюджету, ми готові працювати з будь 
-                        яким і довести що навіть не дорогий декор може вразити всіх.
-                     </p>
-                  </li>
-                  <li class="wow bounceInRight" data-wow-duration="2s" data-wow-offset="0" data-wow-delay="6s">
-                     <p>
-                        Ми на одній хвилі з нашими нареченими, ми відчуваємо Вас 
-                        і розуміємо з пів слова.
-                     </p>
-                  </li>
+                  <?php if( have_rows('blok_abzacziv_chomu_my') ): ?>
+                     <?php while( have_rows('blok_abzacziv_chomu_my') ): the_row(); ?>
+                        <li class="wow bounceInRight" data-wow-duration="2s" data-wow-offset="<?php the_sub_field('vidstan_spryaczyuvannya_animacziyi'); ?>" data-wow-delay="<?php the_sub_field('zatrymka_animacziyi'); ?>s">
+                           <p><?php the_sub_field('teksty_abzacziv_chomu_my'); ?></p>
+                        </li>
+                     <?php endwhile; ?>
+                  <?php endif; ?>
                </ul><!--/.list-->
             </div><!--/.stage__check-->
          </div><!--/.row-->
          <div class="stage__slider--content">
             <hr>
-            <p>
-               Ви знаходитесь в пошуках декораторів на своє весілля? 
-               Шукаєте людей які Вас зрозуміють і зроблять все так як Ви уявляєте. 
-               Або шукаєте декораторів які допоможуть підібрати декор який буде в 
-               тренді, стильний і сучасний.  Тоді Ви на правильному напрямку! 
-               Телефонуйте нам і записуйтесь на безкоштовну консультацію.
-            </p>
+            <p><?php the_field('abzacz_z_nyzu_storinky'); ?></p>
          </div><!--/.content-->
       </div><!--/.container-->
    </section><!--/.stage__slider-->
