@@ -13,7 +13,7 @@
             <h3><?php the_field('osnovnyj_zagolovok_storinky_kontaktiv'); ?></h3>
          </div><!--/.title-->
          <div class="page__contact--form">
-            <form class="wow fadeInLeft contact__form" id="contactForm" data-wow-duration="1.5s" data-wow-delay="0.5s">
+            <form class="wow fadeInLeft contact__form" id="contactForm" data-action="<?php echo site_url(); ?>/wp-admin/admin-ajax.php" data-wow-duration="1.5s" data-wow-delay="0.5s">
                <div class="contact__form--block">
                   <i class="fas fa-user"></i>
                   <input type="text" id="name" name="name">
