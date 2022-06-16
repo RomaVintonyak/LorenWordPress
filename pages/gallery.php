@@ -23,7 +23,7 @@
             </div><!--/.box__gallery-->
          </div><!--/.row-->
          <div class="page__gallery--button">
-            <button type="button" id="galleryButton">Більше проектів<i class="fas fa-angle-down"></i></button>
+            <button type="button" id="galleryButton"><?php the_field('tekst_knopky_zagruzyty_shhe'); ?><i class="fas fa-angle-down"></i></button>
          </div><!--/.button-->
          <div class="page__gallery--line">
             <hr>
