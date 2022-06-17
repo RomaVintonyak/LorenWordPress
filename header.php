@@ -7,7 +7,7 @@
    <!-- Font Awesome -->
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"/>
    <meta name="description" content="<?php bloginfo('description'); ?>" />
-   <meta name="keywords" content="Флористика, декор, банкетний зал, оформлення Івано - Франківськ, весільні декорації, оформлення весіль" />
+   <meta name="keywords" content="<?php the_field('klyuchovi_frazy_ceo', 'option'); ?>" />
    <meta name="google" content="notranslate" />
    <meta name="author" content="Roman Vintonyak" />
    <meta name="robots" content="index, follow" />

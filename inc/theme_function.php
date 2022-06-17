@@ -17,4 +17,9 @@ function contact_form(){
 	echo "Дякуємо за Ваше звернення!";
 	wp_die();
 }
+//optimize img
+add_filter( 'jpeg_quality', 'optimizer' );
+function optimizer( $quality ){
+	return 70;
+}
 ?>
